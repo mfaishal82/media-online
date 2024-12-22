@@ -27,22 +27,12 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {{-- <tr>
-                                                <td>1</td>
-                                                <td>2018-09-29 05:57</td>
-                                                <td>100398</td>
-                                                <td>iPhone X 64Gb Grey</td>
-                                                <td class="text-center">
-                                                    <button class="btn btn-primary btn-sm">Edit</button>
-                                                    <button class="btn btn-danger btn-sm">Delete</button>
-                                                </td>
-                                            </tr> --}}
+
                                     @forelse ($data as $category)
                                         <tr>
                                             <td>{{ $category->id }}</td>
                                             <td>{{ $category->name }}</td>
                                             <td class="text-center">
-                                                <button class="btn btn-primary btn-sm">Edit</button>
                                                 <button class="btn btn-danger btn-sm">Delete</button>
                                             </td>
                                         </tr>
@@ -52,6 +42,7 @@
                                             </td>
                                         </tr>
                                     @endforelse
+                                    
                                 </tbody>
                             </table>
                         </div>

@@ -42,7 +42,7 @@
             <div class="header-mobile__bar">
                 <div class="container-fluid">
                     <div class="header-mobile-inner">
-                        <a class="logo" href="index.html">
+                        <a class="logo" href="/admin">
                             <img src="/theme/images/icon/logo.png" alt="CoolAdmin" />
                         </a>
                         <button class="hamburger hamburger--slider" type="button">
@@ -57,7 +57,7 @@
                 <div class="container-fluid">
                     <ul class="navbar-mobile__list list-unstyled">
                         <li class="has-sub">
-                            <a class="js-arrow" href="/">
+                            <a class="js-arrow" href="/admin">
                                 <i class="fas fa-tachometer-alt"></i>Dashboard</a>
                         </li>
                         <li>
@@ -143,7 +143,7 @@
         <!-- MENU SIDEBAR-->
         <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
-                <a href="/">
+                <a href="/admin">
                     <img src="/theme/images/icon/logo.png" alt="Cool Admin" />
                 </a>
             </div>
@@ -271,6 +271,7 @@
             <!-- HEADER DESKTOP-->
 
             @yield('admin-body')
+
             <!-- END PAGE CONTAINER-->
         </div>
 
@@ -295,6 +296,8 @@
 
     <!-- Main JS-->
     <script src="/theme/js/main.js"></script>
+
+    <script src="//unpkg.com/alpinejs" defer></script>
 
 </body>
 
