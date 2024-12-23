@@ -2,14 +2,14 @@
 
 @section('admin-body')
     <!-- MAIN CONTENT-->
-    <div class="main-content">
+    <div x-data="{ showForm: false }" class="main-content">
         <div class="section__content section__content--p30">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="overview-wrap">
                             <h2 class="title-1">overview</h2>
-                            <button class="au-btn au-btn-icon au-btn--blue">
+                            <button @click="showForm = ! showForm" class="au-btn au-btn-icon au-btn--blue">
                                 <i class="zmdi zmdi-plus"></i>add item</button>
                         </div>
                     </div>
@@ -43,10 +43,10 @@
                                         <tr>
                                             <td>{{ $news->id }}</td>
                                             <td>{{ $news->created_at }}</td>
-                                            <td>{{ $news->title }}</td>
+                                            <td>{{ substr($news->title,0,33) }}</td>
                                             <td class="text-center">
                                                 <button
-                                                    class="btn {{ $news->isHeadline == 'True' ? 'btn-success' : 'btn-secondary' }} btn-sm">
+                                                    class="btn {{ $news->isHeadline == 'true' ? 'btn-success' : 'btn-secondary' }} btn-sm">
                                                     {{ $news->isHeadline }}
                                                 </button>
                                             </td>
@@ -57,7 +57,7 @@
                                         </tr>
                                     @empty
                                         <tr>
-                                            <td colspan="5" class="text-center">Tidak ada data tersedia
+                                            <td colspan="5" class="text-center">No data available
                                             </td>
                                         </tr>
                                     @endforelse
@@ -65,6 +65,7 @@
                             </table>
                         </div>
                     </div>
+                    @include('sections.create-news')
                 </div>
 
                 <footer class="row">

@@ -13,25 +13,25 @@
     <title>Dashboard</title>
 
     <!-- Fontfaces CSS-->
-    <link href="/theme/css/font-face.css" rel="stylesheet" media="all">
-    <link href="/theme/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
-    <link href="/theme/vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
-    <link href="/theme/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="/theme/admin/css/font-face.css" rel="stylesheet" media="all">
+    <link href="/theme/admin/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="/theme/admin/vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="/theme/admin/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
 
     <!-- Bootstrap CSS-->
-    <link href="/theme/vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+    <link href="/theme/admin/vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
 
     <!-- Vendor CSS-->
-    <link href="/theme/vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
-    <link href="/theme/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
-    <link href="/theme/vendor/wow/animate.css" rel="stylesheet" media="all">
-    <link href="/theme/vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
-    <link href="/theme/vendor/slick/slick.css" rel="stylesheet" media="all">
-    <link href="/theme/vendor/select2/select2.min.css" rel="stylesheet" media="all">
-    <link href="/theme/vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+    <link href="/theme/admin/vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="/theme/admin/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="/theme/admin/vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="/theme/admin/vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="/theme/admin/vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="/theme/admin/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="/theme/admin/vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
 
     <!-- Main CSS-->
-    <link href="/theme/css/theme.css" rel="stylesheet" media="all">
+    <link href="/theme/admin/css/theme.css" rel="stylesheet" media="all">
 
 </head>
 
@@ -43,7 +43,7 @@
                 <div class="container-fluid">
                     <div class="header-mobile-inner">
                         <a class="logo" href="/admin">
-                            <img src="/theme/images/icon/logo.png" alt="CoolAdmin" />
+                            <img src="/theme/admin/images/icon/logo.png" alt="CoolAdmin" />
                         </a>
                         <button class="hamburger hamburger--slider" type="button">
                             <span class="hamburger-box">
@@ -144,7 +144,7 @@
         <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
                 <a href="/admin">
-                    <img src="/theme/images/icon/logo.png" alt="Cool Admin" />
+                    <img src="/theme/admin/images/icon/logo.png" alt="Cool Admin" />
                 </a>
             </div>
             <div class="menu-sidebar__content js-scrollbar1">
@@ -223,7 +223,7 @@
                                 <div class="account-wrap">
                                     <div class="account-item clearfix js-item-menu">
                                         <div class="image">
-                                            <img src="/theme/images/icon/avatar-01.jpg" alt="Admin" />
+                                            <img src="/theme/admin/images/icon/avatar-01.jpg" alt="Admin" />
                                         </div>
                                         <div class="content">
                                             <a class="js-acc-btn" href="/">Admin</a>
@@ -232,7 +232,7 @@
                                             <div class="info clearfix">
                                                 <div class="image">
                                                     <a href="/">
-                                                        <img src="/theme/images/icon/avatar-01.jpg" alt="Admin" />
+                                                        <img src="/theme/admin/images/icon/avatar-01.jpg" alt="Admin" />
                                                     </a>
                                                 </div>
                                                 <div class="content">
@@ -278,24 +278,24 @@
     </div>
 
     <!-- Jquery JS-->
-    <script src="/theme/vendor/jquery-3.2.1.min.js"></script>
+    <script src="/theme/admin/vendor/jquery-3.2.1.min.js"></script>
     <!-- Bootstrap JS-->
-    <script src="/theme/vendor/bootstrap-4.1/popper.min.js"></script>
-    <script src="/theme/vendor/bootstrap-4.1/bootstrap.min.js"></script>
+    <script src="/theme/admin/vendor/bootstrap-4.1/popper.min.js"></script>
+    <script src="/theme/admin/vendor/bootstrap-4.1/bootstrap.min.js"></script>
     <!-- Vendor JS       -->
-    <script src="/theme/vendor/slick/slick.min.js"></script>
-    <script src="/theme/vendor/wow/wow.min.js"></script>
-    <script src="/theme/vendor/animsition/animsition.min.js"></script>
-    <script src="/theme/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
-    <script src="/theme/vendor/counter-up/jquery.waypoints.min.js"></script>
-    <script src="/theme/vendor/counter-up/jquery.counterup.min.js"></script>
-    <script src="/theme/vendor/circle-progress/circle-progress.min.js"></script>
-    <script src="/theme/vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
-    <script src="/theme/vendor/chartjs/Chart.bundle.min.js"></script>
-    <script src="/theme/vendor/select2/select2.min.js"></script>
+    <script src="/theme/admin/vendor/slick/slick.min.js"></script>
+    <script src="/theme/admin/vendor/wow/wow.min.js"></script>
+    <script src="/theme/admin/vendor/animsition/animsition.min.js"></script>
+    <script src="/theme/admin/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <script src="/theme/admin/vendor/counter-up/jquery.waypoints.min.js"></script>
+    <script src="/theme/admin/vendor/counter-up/jquery.counterup.min.js"></script>
+    <script src="/theme/admin/vendor/circle-progress/circle-progress.min.js"></script>
+    <script src="/theme/admin/vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="/theme/admin/vendor/chartjs/Chart.bundle.min.js"></script>
+    <script src="/theme/admin/vendor/select2/select2.min.js"></script>
 
     <!-- Main JS-->
-    <script src="/theme/js/main.js"></script>
+    <script src="/theme/admin/js/main.js"></script>
 
     <script src="//unpkg.com/alpinejs" defer></script>
 
