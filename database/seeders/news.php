@@ -29,6 +29,7 @@ Both Russia and Ukraine have been hit by cyberattacks on their infrastructure du
                 'img' => 'https://www.reuters.com/resizer/v2/RXWNWIVM7NLNPN74WQ52TWZK3I.jpg?auth=84a63adeea274f04f757bacb994fce6ff42268aa220a403ef818b1416eb02bcd&width=640&quality=80',
                 'isHeadline' => 'True',
                 'isPopular' => 'True',
+                'category_id' => 1,
                 'created_at' => now(),
                 'updated_at' => now()
             ],
@@ -44,6 +45,7 @@ Last month, the U.S. Department of Justice argued ahead of a judge that Alphabet
                 'img' => 'https://www.reuters.com/resizer/v2/IVAUHYPEANKNZGCIM5VGMK3UVI.jpg?auth=5a91f32ea76cd1ac17a9274f01cb3e14ad58ba247f2fa883158e51e8ee5d7f0d&width=640&quality=80',
                 'isHeadline' => 'False',
                 'isPopular' => 'True',
+                'category_id' => 4,
                 'created_at' => now(),
                 'updated_at' => now()
             ],
@@ -61,6 +63,7 @@ The move comes amid concerns over how president-elect Donald Trump's policies ma
                 'img' => 'https://www.reuters.com/resizer/v2/U2DHSJ5Y2VOAVO2B3RCVF4Y5DE.jpg?auth=598f423b5b06f9f3c894f352b892b7f78db21957a79add5247337a6fee04456e&width=640&quality=80',
                 'isHeadline' => 'False',
                 'isPopular' => 'True',
+                'category_id' => 3,
                 'created_at' => now(),
                 'updated_at' => now()
             ]

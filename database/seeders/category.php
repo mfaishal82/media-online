@@ -21,6 +21,9 @@ class category extends Seeder
                 'name' => 'World',
             ],
             [
+                'name' => 'Business',
+            ],
+            [
                 'name' => 'Technology',
             ]
         ];

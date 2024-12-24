@@ -24,7 +24,7 @@
                                         <th>Id</th>
                                         <th>Date Published</th>
                                         <th>Title</th>
-                                        <th class="text-center">Set Headline</th>
+                                        <th class="text-center">Set Popular</th>
                                         <th class="text-center">Action</th>
                                     </tr>
                                 </thead>
@@ -45,10 +45,17 @@
                                             <td>{{ $news->created_at }}</td>
                                             <td>{{ substr($news->title,0,33) }}</td>
                                             <td class="text-center">
-                                                <button
-                                                    class="btn {{ $news->isHeadline == 'true' ? 'btn-success' : 'btn-secondary' }} btn-sm">
-                                                    {{ $news->isHeadline }}
-                                                </button>
+                                                @if ($news->isPopular == 'false')
+                                                    <a href="/admin/dashboard/set-popular/true/{{ $news->id }}"><button
+                                                        class="btn {{ $news->isPopular == 'true' ? 'btn-success' : 'btn-secondary' }} btn-sm">
+                                                        {{ $news->isPopular }}
+                                                    </button></a>
+                                                @else
+                                                    <a href="/admin/dashboard/set-popular/false/{{ $news->id }}"><button
+                                                        class="btn {{ $news->isPopular == 'true' ? 'btn-success' : 'btn-secondary' }} btn-sm">
+                                                        {{ $news->isPopular }}
+                                                    </button></a>
+                                                @endif
                                             </td>
                                             <td class="text-center">
                                                 <button class="btn btn-primary btn-sm">Edit</button>

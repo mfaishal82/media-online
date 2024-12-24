@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Models\NewsModel;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
@@ -11,15 +13,24 @@ class AdminController extends Controller
     public function index()
     {
         $data = DB::table('news')->get();
-    
-        return view('admin.dashboard', compact('data'));
+
+        return view('admin.dashboard', ['data' => $data]);
     }
 
     public function getCategory()
     {
         $data = DB::table('category')->get();
-    
-        return view('admin.category', compact('data'));
+
+        return view('admin.category', ['data' => $data]);
+    }
+
+    public function setPopular($status, $id)
+    {
+        DB::table('news')
+        ->where('id', $id)
+        ->update([ 'isPopular' => $status ]);
+
+        return redirect('/admin');
     }
 
     public function login()
