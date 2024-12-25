@@ -258,7 +258,13 @@
                                                         <i class="zmdi zmdi-money-box"></i>Billing</a>
                                                 </div> --}}
                                             </div>
-                                            <div class="account-dropdown__footer class="btn-logout"">
+                                                <style>
+                                                    .btn-logout:hover {
+                                                        color: #fff;
+                                                        background-color: #f00;
+                                                    }
+                                                </style>
+                                            <div class="account-dropdown__footer btn-logout">
                                                 <form action="/logout" method="post">
                                                     @csrf
                                                     <button type="submit" style="background: none; border: none; padding-right: 50px; padding-left: 30px; padding-top: 20px; padding-bottom: 20px;  color: inherit; cursor: pointer;">
