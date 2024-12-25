@@ -47,6 +47,9 @@
                         <div class="col col-md-3">
                             <label for="img" class=" form-control-label">Image input</label>
                         </div>
+                        <div class="col col-md-6">
+                            <img src="/images/{{ $data->img }}" alt="{{ $data->title }}" class="img-preview" style="width: auto; height: 100px;">
+                        </div>
                         <div class="col-12 col-md-9">
                             <input type="file" id="img" name="img" required class="form-control-file">
                         </div>
