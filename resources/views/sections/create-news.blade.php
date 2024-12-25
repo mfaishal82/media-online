@@ -1,4 +1,4 @@
-<div x-show="showForm" 
+<div x-show="showForm"
     style=" position: fixed;
             top: 0;
             right: 0;
@@ -21,7 +21,7 @@
                 <strong>Add News</strong> Data
             </div>
             <div class="card-body card-block">
-                <form action="" method="post" enctype="multipart/form-data" class="form-horizontal" id="newsForm">
+                <form action="/admin/dashboard/create-news" method="post" enctype="multipart/form-data" class="form-horizontal" id="newsForm">
                     @csrf
                     <div class="row form-group">
                         <div class="col col-md-3">
@@ -46,16 +46,19 @@
                         </div>
                         <div class="col-12 col-md-9">
                             <select name="category" id="SelectLm" required class="form-control-sm form-control">
-                                <option value="0">Please select</option>
+                                <option value="0" selected>Please select</option>
+                                @foreach ( $category as $item )
+                                    <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                @endforeach
                             </select>
                         </div>
                     </div>
                     <div class="row form-group">
                         <div class="col col-md-3">
-                            <label for="image" class=" form-control-label">Image input</label>
+                            <label for="img" class=" form-control-label">Image input</label>
                         </div>
                         <div class="col-12 col-md-9">
-                            <input type="file" id="image" name="image" required class="form-control-file">
+                            <input type="file" id="img" name="img" required class="form-control-file">
                         </div>
                     </div>
                     <div class="card-footer">
@@ -75,16 +78,16 @@
 <script>
     document.querySelector('button[type="reset"]').addEventListener('click', function(e) {
     e.preventDefault();
-    
+
     document.getElementById('title').value = '';
     document.getElementById('content').value = '';
     document.getElementById('SelectLm').value = '0';
-    document.getElementById('image').value = '';
-    
-    const imagePreview = document.querySelector('.image-preview');
-    if (imagePreview) {
-        imagePreview.src = '';
-        imagePreview.style.display = 'none';
+    document.getElementById('img').value = '';
+
+    const imgPreview = document.querySelector('.img-preview');
+    if (imgPreview) {
+        imgPreview.src = '';
+        imgPreview.style.display = 'none';
     }
 });
 </script>

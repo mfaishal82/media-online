@@ -5,7 +5,7 @@
     <!-- begin post -->
     @foreach ( $data as $news )
         <div class="post">
-            <div class="thumb"><a href="/detail/{{ $news->id }}"><img src="{{ $news->img }}" alt="" /></a></div>
+            <div class="thumb"><a href="/detail/{{ $news->id }}"><img src="/images/{{ $news->img }}" alt="" /></a></div>
             <h2><a href="/detail/{{ $news->id }}">{{ $news->title }}</a></h2>
             <p class="date" style="cursor: default"><u>Posted on {{ $news->created_at }} by admin</u></p>
             <p style="cursor: default">{{ substr($news->content, 0, 300) }}... </p>

@@ -13,7 +13,7 @@ class AdminMiddleware
         if (!Auth::check()) {
             return redirect()->route('login');
         }
-        
+
         return $next($request);
     }
 }

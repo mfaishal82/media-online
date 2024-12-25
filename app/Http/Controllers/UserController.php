@@ -9,7 +9,7 @@ class UserController extends Controller
 {
     public function index()
     {
-        $data  = DB::table('news')->join('category', 'news.category_id', '=', 'category.id')->get();
+        $data  = DB::table('news')->join('category', 'news.category_id', '=', 'category.id')->orderBy('created_at', 'desc')->get();
 
         return view('frontend.home', ['data' => $data]);
     }
@@ -21,7 +21,7 @@ class UserController extends Controller
         return view('frontend.detail', ['data' => $data]);
     }
 
-    // public function getCategory()
+    // public function getAllCategory()
     // {
     //     $data = DB::table('category')->get();
 

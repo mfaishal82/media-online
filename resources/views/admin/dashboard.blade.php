@@ -42,8 +42,8 @@
                                     @forelse ($data as $news)
                                         <tr>
                                             <td>{{ $news->id }}</td>
-                                            <td>{{ $news->created_at }}</td>
-                                            <td>{{ substr($news->title,0,33) }}</td>
+                                            <td>{{ substr($news->created_at, 0, 10) }}</td>
+                                            <td>{{ substr($news->title,0,20) }}...</td>
                                             <td class="text-center">
                                                 @if ($news->isPopular == 'false')
                                                     <a href="/admin/dashboard/set-popular/true/{{ $news->id }}"><button
@@ -58,8 +58,8 @@
                                                 @endif
                                             </td>
                                             <td class="text-center">
-                                                <button class="btn btn-primary btn-sm">Edit</button>
-                                                <button class="btn btn-danger btn-sm">Delete</button>
+                                                <a href="/admin/dashboard/edit-news/{{ $news->id }}" class="btn btn-primary btn-sm">Edit</a>
+                                                <a href="/admin/dashboard/delete-news/{{ $news->id }}" class="btn btn-danger btn-sm">Delete</a>
                                             </td>
                                         </tr>
                                     @empty

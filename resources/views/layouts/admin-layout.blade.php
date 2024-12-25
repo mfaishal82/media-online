@@ -257,8 +257,11 @@
                                                 </div> --}}
                                             </div>
                                             <div class="account-dropdown__footer">
-                                                <a href="/">
-                                                    <i class="zmdi zmdi-power"></i>Logout</a>
+                                                <form action="/logout" method="post">
+                                                    <button>
+                                                    <i class="zmdi zmdi-power"></i>Logout
+                                                    </button>
+                                                </form>
                                             </div>
                                         </div>
                                     </div>

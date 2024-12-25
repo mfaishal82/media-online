@@ -26,9 +26,9 @@ The Ukrainian security service's cyber department said their main line of invest
 All the data would restored, she added. It could take up to two weeks to restore basic services, she said.
 As of Friday afternoon, the ministry's website said it was undergoing 'technical maintenance'.
 Both Russia and Ukraine have been hit by cyberattacks on their infrastructure during their 33-month-long war. Ukraine's biggest mobile network operator was attacked last December.",
-                'img' => 'https://www.reuters.com/resizer/v2/RXWNWIVM7NLNPN74WQ52TWZK3I.jpg?auth=84a63adeea274f04f757bacb994fce6ff42268aa220a403ef818b1416eb02bcd&width=640&quality=80',
-                'isHeadline' => 'True',
-                'isPopular' => 'True',
+                'img' => '/images/cyber.png',
+                // 'isHeadline' => 'true',
+                'isPopular' => 'true',
                 'category_id' => 1,
                 'created_at' => now(),
                 'updated_at' => now()
@@ -42,9 +42,9 @@ Google did not immediately respond to request for comment while the JFTC could n
 The Japanese competition watchdog started investigating Google for a possible breach of antimonopoly laws in web search services last October, following similar steps by authorities in Europe and other major economies. \n
 Chrome is the world's most widely used web browser and is a pillar of Google's business, providing user information that helps the company target ads more effectively and profitably. \n
 Last month, the U.S. Department of Justice argued ahead of a judge that Alphabet owned Google must divest its Chrome browser and should not be allowed to re-enter the browser market for five years in an effort to end Google's search monopoly.",
-                'img' => 'https://www.reuters.com/resizer/v2/IVAUHYPEANKNZGCIM5VGMK3UVI.jpg?auth=5a91f32ea76cd1ac17a9274f01cb3e14ad58ba247f2fa883158e51e8ee5d7f0d&width=640&quality=80',
-                'isHeadline' => 'False',
-                'isPopular' => 'True',
+                'img' => '/images/google.png',
+                // 'isHeadline' => 'false',
+                'isPopular' => 'true',
                 'category_id' => 4,
                 'created_at' => now(),
                 'updated_at' => now()
@@ -60,9 +60,9 @@ As announced, Honda, 'Nissan and Mitsubishi Motors are in the process of bringin
 Nissan declined to comment, saying the details of the report were not based on a company announcement. Nissan is the top shareholder in Mitsubishi Motors (7211.T), opens new tab. \n
 Kyodo said Honda could use Nissan's car factory in Britain, as it now only has factories for engines and motorcycles in Europe.
 The move comes amid concerns over how president-elect Donald Trump's policies may shake up manufacturing with his promises of protectionist trade policies, the report said",
-                'img' => 'https://www.reuters.com/resizer/v2/U2DHSJ5Y2VOAVO2B3RCVF4Y5DE.jpg?auth=598f423b5b06f9f3c894f352b892b7f78db21957a79add5247337a6fee04456e&width=640&quality=80',
-                'isHeadline' => 'False',
-                'isPopular' => 'True',
+                'img' => '/images/nissan.png',
+                // 'isHeadline' => 'false',
+                'isPopular' => 'true',
                 'category_id' => 3,
                 'created_at' => now(),
                 'updated_at' => now()
