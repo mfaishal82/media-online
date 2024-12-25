@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CreateNewsRequest;
+use App\Models\CategoriesModel;
 use App\Models\NewsModel;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
@@ -12,46 +14,46 @@ class AdminController extends Controller
 {
     public function index()
     {
-        $data = DB::table('news')->get();
-        $category = DB::table('category')->get();
-
-        return view('admin.dashboard', ['data' => $data, 'category' => $category]);
+        $data = DB::table('news')
+        ->get();
+        $categories = DB::table('category')->get();
+        // return $data;
+        // return $category;
+        return view('admin.dashboard', ['data' => $data, 'categories' => $categories]);
     }
 
     public function createNews(Request $request)
     {
-        // $request->validate([
-        //     'title' => 'required',
-        //     'content' => 'required',
-        //     'img' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-        // ]);
-        // return $request;
-        $image_name = time().'.'.$request->img->extension();
+        // return $request->category;
+        $image_name = time() . '.' . $request->img->extension();
         $request->img->move(public_path('images'), $image_name);
 
         $data = new NewsModel();
         $data->title = $request->title;
         $data->content = $request->content;
+        $data->category_id = $request->category;
         $data->img = $image_name;
         $data->save();
+
+        // CreateNewsRequest::create($request->validate());
 
         return redirect('/admin');
     }
 
-    public function editNews(Request $id)
+    public function editNews($id)
     {
         // return $id;
-
-        $data = NewsModel::find($id)
-        ->join('category', 'news.category_id', '=', 'category.id');
-        $categories = DB::table('category')->get();
-
+        $data = NewsModel::where('news.id', $id)
+            ->join('category', 'news.category_id', '=', 'category.id')
+            ->first();
+        $categories = CategoriesModel::get();
+        // return $data;
         return view('admin.edit-news', ['data' => $data, 'categories' => $categories]);
     }
 
     public function updateNews(Request $request)
     {
-        $image_name = time().'.'.$request->img->extension();
+        $image_name = time() . '.' . $request->img->extension();
         $request->img->move(public_path('images'), $image_name);
 
 
@@ -67,6 +69,13 @@ class AdminController extends Controller
 
     public function deleteNews($id)
     {
+        $news = NewsModel::find($id);
+        $image_path = public_path('images') . '/' . $news->img;
+
+        if (file_exists($image_path)) {
+            unlink($image_path);
+        }
+
         DB::table('news')->where('id', $id)->delete();
 
         return redirect('/admin');
@@ -82,8 +91,8 @@ class AdminController extends Controller
     public function setPopular($status, $id)
     {
         DB::table('news')
-        ->where('id', $id)
-        ->update([ 'isPopular' => $status ]);
+            ->where('id', $id)
+            ->update(['isPopular' => $status]);
 
         return redirect('/admin');
     }

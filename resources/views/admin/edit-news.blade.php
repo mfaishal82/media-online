@@ -37,11 +37,8 @@
                         </div>
                         <div class="col-12 col-md-9">
                             <select name="category" id="SelectLm" required class="form-control-sm form-control">
-                                <option value="{{ $data->category_id }}" selected disabled>{{ $data->name }}</option>
-                                @foreach ($categories as $category)
-                                    @if ($category->name !== $data->name)
-                                        <option value="{{ $category->id }}">{{ $category->name }}</option>
-                                    @endif
+                                @foreach ( $categories as $category )
+                                    <option value="{{ $category->name }}" {{ $category->name === $data->name ? 'selected' : '' }}>{{ $category->name }}</option>
                                 @endforeach
                             </select>
                         </div>

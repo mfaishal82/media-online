@@ -45,9 +45,9 @@
                             <label for="category" class=" form-control-label">Select Category</label>
                         </div>
                         <div class="col-12 col-md-9">
-                            <select name="category" id="SelectLm" required class="form-control-sm form-control">
-                                <option value="0" selected>Please select</option>
-                                @foreach ( $category as $item )
+                            <select name="category" id="categorySelect" required class="form-control-sm form-control">
+                                <option value="0" selected disabled>Please select</option>
+                                @foreach ( $categories as $item )
                                     <option value="{{ $item->id }}">{{ $item->name }}</option>
                                 @endforeach
                             </select>
@@ -81,7 +81,7 @@
 
     document.getElementById('title').value = '';
     document.getElementById('content').value = '';
-    document.getElementById('SelectLm').value = '0';
+    document.getElementById('categorySelect').value = '0';
     document.getElementById('img').value = '';
 
     const imgPreview = document.querySelector('.img-preview');

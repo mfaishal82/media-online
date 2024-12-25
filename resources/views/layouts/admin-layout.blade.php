@@ -23,7 +23,8 @@
 
     <!-- Vendor CSS-->
     <link href="/theme/admin/vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
-    <link href="/theme/admin/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="/theme/admin/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet"
+        media="all">
     <link href="/theme/admin/vendor/wow/animate.css" rel="stylesheet" media="all">
     <link href="/theme/admin/vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
     <link href="/theme/admin/vendor/slick/slick.css" rel="stylesheet" media="all">
@@ -232,7 +233,8 @@
                                             <div class="info clearfix">
                                                 <div class="image">
                                                     <a href="/">
-                                                        <img src="/theme/admin/images/icon/avatar-01.jpg" alt="Admin" />
+                                                        <img src="/theme/admin/images/icon/avatar-01.jpg"
+                                                            alt="Admin" />
                                                     </a>
                                                 </div>
                                                 <div class="content">
@@ -256,10 +258,11 @@
                                                         <i class="zmdi zmdi-money-box"></i>Billing</a>
                                                 </div> --}}
                                             </div>
-                                            <div class="account-dropdown__footer">
+                                            <div class="account-dropdown__footer class="btn-logout"">
                                                 <form action="/logout" method="post">
-                                                    <button>
-                                                    <i class="zmdi zmdi-power"></i>Logout
+                                                    @csrf
+                                                    <button type="submit" style="background: none; border: none; padding-right: 50px; padding-left: 30px; padding-top: 20px; padding-bottom: 20px;  color: inherit; cursor: pointer;">
+                                                        <i class="zmdi zmdi-power" style="margin-right: 18px"></i>Logout
                                                     </button>
                                                 </form>
                                             </div>
