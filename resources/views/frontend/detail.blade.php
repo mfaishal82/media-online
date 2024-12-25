@@ -6,7 +6,7 @@
         <div
             style="padding: 10px; max-width: 100%;"
         >
-            <div class="thumb"><a href="/"><img src="{{ $data->img }}" alt="" /></a></div>
+            <div class="thumb"><a href="/"><img src="/images/{{ $data->img }}" alt="" /></a></div>
             <h2 style="margin-top: 5px; font-size: 20px"><a>{{ $data->title }}</a></h2>
             <p class="date" style="margin-top: 5px; font-weight: 900"><u>Posted on {{ $data->created_at }} by admin</u></p>
             <pre style="margin-top: 10px; font-weight: 500; font-size: 16px; white-space: pre-wrap;">{{ $data->content }}</pre>

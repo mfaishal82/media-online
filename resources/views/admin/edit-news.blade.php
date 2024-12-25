@@ -4,7 +4,7 @@
     <div class="col-lg-6" style="margin-top: 100px;">
         <div class="card">
             <div class="card-header">
-                <strong>Add News</strong> Data
+                <strong>Edit News</strong> Data
             </div>
             <div class="card-body card-block">
                 <form action="/admin/dashboard/create-news" method="post" enctype="multipart/form-data" class="form-horizontal"

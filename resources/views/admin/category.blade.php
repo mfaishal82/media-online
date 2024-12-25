@@ -2,14 +2,14 @@
 
 @section('admin-body')
     <!-- MAIN CONTENT-->
-    <div class="main-content">
+    <div x-data="{ showForm: false }" class="main-content">
         <div class="section__content section__content--p30">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="overview-wrap">
                             <h2 class="title-1">overview</h2>
-                            <button class="au-btn au-btn-icon au-btn--blue">
+                            <button @click="showForm = !showForm " class="au-btn au-btn-icon au-btn--blue">
                                 <i class="zmdi zmdi-plus"></i>add item</button>
                         </div>
                     </div>
@@ -33,7 +33,7 @@
                                             <td>{{ $category->id }}</td>
                                             <td>{{ $category->name }}</td>
                                             <td class="text-center">
-                                                <button class="btn btn-danger btn-sm">Delete</button>
+                                                <a href="/admin/category/delete-category/{{ $category->id }}" class="btn btn-danger btn-sm">Delete</a>
                                             </td>
                                         </tr>
                                     @empty
@@ -42,11 +42,15 @@
                                             </td>
                                         </tr>
                                     @endforelse
-                                    
+
                                 </tbody>
                             </table>
                         </div>
                     </div>
+                </div>
+
+                <div class="row" style="margin-top: 20px">
+                    @include('sections.create-category')
                 </div>
 
                 <footer class="row">

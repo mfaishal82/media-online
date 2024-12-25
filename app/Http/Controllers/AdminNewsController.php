@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Auth;
 
 use Illuminate\Http\Request;
 
-class AdminController extends Controller
+class AdminNewsController extends Controller
 {
     public function index()
     {
@@ -79,13 +79,6 @@ class AdminController extends Controller
         DB::table('news')->where('id', $id)->delete();
 
         return redirect('/admin');
-    }
-
-    public function getCategory()
-    {
-        $data = DB::table('category')->get();
-
-        return view('admin.category', ['data' => $data]);
     }
 
     public function setPopular($status, $id)
