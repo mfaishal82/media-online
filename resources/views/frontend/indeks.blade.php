@@ -46,7 +46,7 @@
     }
 
     .news-header {
-        color: #2563eb;
+        color: #ff5252;
         font-size: 18px;
         margin: 0 0 10px 0;
     }
@@ -100,7 +100,6 @@
                         <span class="category-badge">{{ $item->categoryName }}</span>
                         <p class="news-text">{{ substr($item->content, 0, 200) }}</p>
                         <div class="news-meta">
-                            <small>ID: {{ $item->news_id }}</small>
                             <small>{{ \Carbon\Carbon::parse($item->created_at)->format('d M Y') }}</small>
                         </div>
                     </div>
