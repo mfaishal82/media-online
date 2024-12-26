@@ -60,7 +60,7 @@ class AdminNewsController extends Controller
         $image_name = time() . '.' . $request->img->extension();
         $request->img->move(public_path('images'), $image_name);
 
-        $data = NewsModel::find($request->id);
+        $data = NewsModel::where('id', $id)->first();
         $data->title = $request->title;
         $data->content = $request->content;
         $data->category_id = $request->category;
@@ -72,13 +72,6 @@ class AdminNewsController extends Controller
 
     public function deleteNews($id)
     {
-        $news = NewsModel::find($id);
-        $image_path = public_path('images') . '/' . $news->img;
-
-        if (file_exists($image_path)) {
-            unlink($image_path);
-        }
-
         DB::table('news')->where('id', $id)->delete();
 
         return redirect('/admin');
