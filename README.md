@@ -2,7 +2,7 @@
 
 ## Tentang Proyek
 
-Ini adalah repository dari Final Project dengan tema Media Online.
+Ini adalah repository untuk tugas Final Project dengan tema Media Online.
  Proyek ini dibuat menggunakan:
 * [Laravel](https://laravel.com)
 * [Bootstrap](https://getbootstrap.com/)
@@ -29,8 +29,12 @@ Fitur yang tersedia:
 * Ketik perintah dibawah ini secara berturut-turut di cmd : 
 ```
 git clone https://github.com/mfaishal82/media-online
+
 cd media-online
-buat .env dan sesuaikan dengan example env
+composer install
+->buat file .env dan copy dari example env
+php artisan migrate
+php artisan db:seed
 php artisan key:generate
 ```
 * Untuk menjalankan server, ketik perintah berikut di terminal 
@@ -41,7 +45,12 @@ php artisan serve
 ```
 composer run dev
 ```
-* Buka browser dan ketikkan `http://localhost:8000` di address bar untuk membuka website
+* Untuk login ke admin bisa gunakan:
+```
+email: admin@mail.com
+password: 12345678
+```
+* Buka browser dan ketikkan `http://localhost:8000/admin` di address bar untuk membuka halaman admin. Dan `http://localhost:8000` untuk membuka halaman website
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
