@@ -1,5 +1,9 @@
 @extends('layouts.frontend-layout')
 
+@section('title')
+{{ $data->title }}
+@endsection
+
 @section('content')
 <div id="content">
     <!-- begin post -->

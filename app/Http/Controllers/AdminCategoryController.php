@@ -19,7 +19,7 @@ class AdminCategoryController extends Controller
     public function createCategory(Request $request)
     {
         DB::table('category')->insert([
-            'name' => $request->name
+            'categoryName' => $request->categoryName
         ]);
 
         return redirect('/admin/category');

@@ -10,7 +10,7 @@
     <meta name="keywords" content="au theme template">
 
     <!-- Title Page-->
-    <title>Dashboard</title>
+    <title>@yield('title-page')</title>
 
     <!-- Fontfaces CSS-->
     <link href="/theme/admin/css/font-face.css" rel="stylesheet" media="all">
@@ -151,11 +151,11 @@
             <div class="menu-sidebar__content js-scrollbar1">
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
-                        <li class="active has-sub">
+                        <li class="{{ request()->is('admin/dashboard') ? 'active' : '' }}">
                             <a class="js-arrow" href="/admin">
                                 <i class="fas fa-tachometer-alt"></i>List of News</a>
                         </li>
-                        <li>
+                        <li class="{{ request()->is('admin/category') ? 'active' : '' }}">
                             <a href="/admin/category">
                                 <i class="fas fa-table"></i>List of Category</a>
                         </li>
@@ -265,7 +265,7 @@
                                                     }
                                                 </style>
                                             <div class="account-dropdown__footer btn-logout">
-                                                <form action="/logout" method="post">
+                                                <form action="/admin/logout" method="post">
                                                     @csrf
                                                     <button type="submit" style="background: none; border: none; padding-right: 50px; padding-left: 30px; padding-top: 20px; padding-bottom: 20px;  color: inherit; cursor: pointer;">
                                                         <i class="zmdi zmdi-power" style="margin-right: 18px"></i>Logout

@@ -1,5 +1,9 @@
 @extends('layouts.admin-layout')
 
+@section('title-page')
+Dashboard - News
+@endsection
+
 @section('admin-body')
     <!-- MAIN CONTENT-->
     <div x-data="{ showForm: false }" class="main-content">

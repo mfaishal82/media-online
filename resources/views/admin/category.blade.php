@@ -1,5 +1,9 @@
 @extends('layouts.admin-layout')
 
+@section('title-page')
+Dashboard - Category
+@endsection
+
 @section('admin-body')
     <!-- MAIN CONTENT-->
     <div x-data="{ showForm: false }" class="main-content">
@@ -31,7 +35,7 @@
                                     @forelse ($data as $category)
                                         <tr>
                                             <td>{{ $category->id }}</td>
-                                            <td>{{ $category->name }}</td>
+                                            <td>{{ $category->categoryName }}</td>
                                             <td class="text-center">
                                                 <a href="/admin/category/delete-category/{{ $category->id }}" class="btn btn-danger btn-sm">Delete</a>
                                             </td>

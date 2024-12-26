@@ -28,7 +28,7 @@
                             <label for="category" class=" form-control-label">Category Name</label>
                         </div>
                         <div class="col-12 col-md-9">
-                            <input type="text" id="category" name="name" placeholder="Input category name" required class="form-control">
+                            <input type="text" id="category" name="categoryName" placeholder="Input category name" required class="form-control">
                             {{-- <small class="form-text text-muted">This is a help text</small> --}}
                         </div>
                     </div>

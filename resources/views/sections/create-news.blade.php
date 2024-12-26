@@ -48,7 +48,7 @@
                             <select name="category" id="categorySelect" required class="form-control-sm form-control">
                                 <option value="0" selected disabled>Please select</option>
                                 @foreach ( $categories as $item )
-                                    <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                    <option value="{{ $item->id }}">{{ $item->categoryName }}</option>
                                 @endforeach
                             </select>
                         </div>

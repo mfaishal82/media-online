@@ -26,7 +26,7 @@ The Ukrainian security service's cyber department said their main line of invest
 All the data would restored, she added. It could take up to two weeks to restore basic services, she said.
 As of Friday afternoon, the ministry's website said it was undergoing 'technical maintenance'.
 Both Russia and Ukraine have been hit by cyberattacks on their infrastructure during their 33-month-long war. Ukraine's biggest mobile network operator was attacked last December.",
-                'img' => '/images/cyber.png',
+                'img' => 'cyber.png',
                 // 'isHeadline' => 'true',
                 'isPopular' => 'true',
                 'category_id' => 1,
@@ -42,7 +42,7 @@ Google did not immediately respond to request for comment while the JFTC could n
 The Japanese competition watchdog started investigating Google for a possible breach of antimonopoly laws in web search services last October, following similar steps by authorities in Europe and other major economies. \n
 Chrome is the world's most widely used web browser and is a pillar of Google's business, providing user information that helps the company target ads more effectively and profitably. \n
 Last month, the U.S. Department of Justice argued ahead of a judge that Alphabet owned Google must divest its Chrome browser and should not be allowed to re-enter the browser market for five years in an effort to end Google's search monopoly.",
-                'img' => '/images/google.png',
+                'img' => 'google.png',
                 // 'isHeadline' => 'false',
                 'isPopular' => 'true',
                 'category_id' => 4,
@@ -60,7 +60,7 @@ As announced, Honda, 'Nissan and Mitsubishi Motors are in the process of bringin
 Nissan declined to comment, saying the details of the report were not based on a company announcement. Nissan is the top shareholder in Mitsubishi Motors (7211.T), opens new tab. \n
 Kyodo said Honda could use Nissan's car factory in Britain, as it now only has factories for engines and motorcycles in Europe.
 The move comes amid concerns over how president-elect Donald Trump's policies may shake up manufacturing with his promises of protectionist trade policies, the report said",
-                'img' => '/images/nissan.png',
+                'img' => 'nissan.png',
                 // 'isHeadline' => 'false',
                 'isPopular' => 'true',
                 'category_id' => 3,

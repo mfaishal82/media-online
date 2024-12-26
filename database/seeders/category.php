@@ -15,16 +15,16 @@ class category extends Seeder
     {
         $data = [
             [
-                'name' => 'Cybersecurity',
+                'categoryName' => 'Cybersecurity',
             ],
             [
-                'name' => 'World',
+                'categoryName' => 'World',
             ],
             [
-                'name' => 'Business',
+                'categoryName' => 'Business',
             ],
             [
-                'name' => 'Technology',
+                'categoryName' => 'Technology',
             ]
         ];
 

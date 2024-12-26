@@ -18,7 +18,7 @@ class AdminNewsController extends Controller
         ->get();
         $categories = DB::table('category')->get();
         // return $data;
-        // return $category;
+        // return $categories;
         return view('admin.dashboard', ['data' => $data, 'categories' => $categories]);
     }
 
@@ -45,22 +45,25 @@ class AdminNewsController extends Controller
         // return $id;
         $data = NewsModel::where('news.id', $id)
             ->join('category', 'news.category_id', '=', 'category.id')
+            ->select('news.id as news_id', 'news.title', 'news.content', 'news.img', 'category.id as category_id')
             ->first();
         $categories = CategoriesModel::get();
         // return $data;
+        // return $categories;
         return view('admin.edit-news', ['data' => $data, 'categories' => $categories]);
     }
 
-    public function updateNews(Request $request)
+    public function updateNews(Request $request, $id)
     {
+        // return $id;
+        // return $request;
         $image_name = time() . '.' . $request->img->extension();
         $request->img->move(public_path('images'), $image_name);
-
 
         $data = NewsModel::find($request->id);
         $data->title = $request->title;
         $data->content = $request->content;
-        $data->category_id = $request->name;
+        $data->category_id = $request->category;
         $data->img = $image_name;
         $data->save();
 
@@ -90,37 +93,5 @@ class AdminNewsController extends Controller
         return redirect('/admin');
     }
 
-    public function login()
-    {
-        if (Auth::check()) {
-            return redirect('/admin');
-        }
 
-        return view('admin.login');
-    }
-
-    public function authenticate(Request $request)
-    {
-        $credentials = $request->validate([
-            'email' => ['required', 'email'],
-            'password' => ['required'],
-        ]);
-
-        if (Auth::attempt($credentials)) {
-            $request->session()->regenerate();
-            return redirect()->intended('/admin');
-        }
-
-        return back()->withErrors([
-            'email' => 'Email or password is wrong!.',
-        ]);
-    }
-
-    public function logout(Request $request)
-    {
-        Auth::logout();
-        $request->session()->invalidate();
-        $request->session()->regenerateToken();
-        return redirect('/login');
-    }
 }

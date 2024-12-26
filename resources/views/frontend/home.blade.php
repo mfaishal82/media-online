@@ -1,15 +1,19 @@
 @extends('layouts.frontend-layout')
 
+@section('title')
+The Fast News
+@endsection
+
 @section('content')
 <div id="content">
     <!-- begin post -->
     @foreach ( $data as $news )
         <div class="post">
-            <div class="thumb"><a href="/detail/{{ $news->id }}"><img src="/images/{{ $news->img }}" alt="" /></a></div>
-            <h2><a href="/detail/{{ $news->id }}">{{ $news->title }}</a></h2>
+            <div class="thumb"><a href="/detail/{{ $news->news_id }}"><img src="/images/{{ $news->img }}" alt="" /></a></div>
+            <h2><a href="/detail/{{ $news->news_id }}">{{ $news->title }}</a></h2>
             <p class="date" style="cursor: default"><u>Posted on {{ $news->created_at }} by admin</u></p>
             <p style="cursor: default">{{ substr($news->content, 0, 300) }}... </p>
-            <a class="continue" href="/detail/{{ $news->id }}">Continue Reading</a>
+            <a class="continue" href="/detail/{{ $news->news_id }}">Continue Reading</a>
         </div>
         <!-- end post -->
     @endforeach

@@ -1,13 +1,18 @@
 @extends('layouts.admin-layout')
 
+@section('title-page')
+Edit News Data
+@endsection
+
 @section('admin-body')
     <div class="col-lg-6" style="margin-top: 100px;">
         <div class="card">
             <div class="card-header">
-                <strong>Edit News</strong> Data
+                <strong>Edit News</strong> For Data ID : {{ $data->news_id }}
+                {{-- {{ $data->news_id }} --}}
             </div>
             <div class="card-body card-block">
-                <form action="/admin/dashboard/create-news" method="post" enctype="multipart/form-data" class="form-horizontal"
+                <form action="/admin/dashboard/update-news/{{ $data->news_id }}" method="post" enctype="multipart/form-data" class="form-horizontal"
                     id="newsForm">
                     @csrf
                     <div class="row form-group">
@@ -25,7 +30,8 @@
                             <label for="content" class=" form-control-label">Content</label>
                         </div>
                         <div class="col-12 col-md-9">
-                            <textarea name="content" id="content" rows="9" placeholder="Content..." required class="form-control">0___>
+                            <pre>
+                            <textarea name="content" id="content" rows="9" placeholder="Content..." required class="form-control">
                                 {{ $data->content }}
                             </textarea>
                             </pre>
@@ -38,7 +44,7 @@
                         <div class="col-12 col-md-9">
                             <select name="category" id="SelectLm" required class="form-control-sm form-control">
                                 @foreach ( $categories as $category )
-                                    <option value="{{ $category->name }}" {{ $category->name === $data->name ? 'selected' : '' }}>{{ $category->name }}</option>
+                                    <option value="{{ $category->id }}" {{ $category->id === $data->category_id ? 'selected' : '' }}>{{ $category->categoryName }}</option>
                                 @endforeach
                             </select>
                         </div>
