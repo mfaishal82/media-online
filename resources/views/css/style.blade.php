@@ -1,3 +1,4 @@
+<style>
 * {
 	margin: 0; padding: 0;
 }
@@ -489,3 +490,4 @@ h2.title {
         transition: all 0.3s ease-in-out;
 	}
 /** END wordpress 2.7 comments **/
+</style>

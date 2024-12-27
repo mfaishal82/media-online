@@ -4,8 +4,7 @@
             right: 0;
             bottom: 0;
             left: 0;
-            z-index: 9999;"
->
+            z-index: 9999;">
     <div class="col-lg-6" @click.away="showForm = false"
         style=" position: fixed;
                 height: screen;
@@ -14,21 +13,22 @@
                 bottom: 0;
                 margin: 0;
                 z-index: 9999;
-                box-shadow: 50px"
-    >
+                box-shadow: 50px">
         <div class="card">
             <div class="card-header">
                 <strong>Add News</strong> Data
             </div>
             <div class="card-body card-block">
-                <form action="/admin/dashboard/create-news" method="post" enctype="multipart/form-data" class="form-horizontal" id="newsForm">
+                <form action="/admin/dashboard/create-news" method="post" enctype="multipart/form-data"
+                    class="form-horizontal" id="newsForm">
                     @csrf
                     <div class="row form-group">
                         <div class="col col-md-3">
                             <label for="title" class=" form-control-label">Title</label>
                         </div>
                         <div class="col-12 col-md-9">
-                            <input type="text" id="title" name="title" placeholder="Input Title" required class="form-control">
+                            <input type="text" id="title" name="title" placeholder="Input Title" required
+                                class="form-control">
                             {{-- <small class="form-text text-muted">This is a help text</small> --}}
                         </div>
                     </div>
@@ -47,7 +47,7 @@
                         <div class="col-12 col-md-9">
                             <select name="category" id="categorySelect" required class="form-control-sm form-control">
                                 <option value="0" selected disabled>Please select</option>
-                                @foreach ( $categories as $item )
+                                @foreach ($categories as $item)
                                     <option value="{{ $item->id }}">{{ $item->categoryName }}</option>
                                 @endforeach
                             </select>
@@ -77,17 +77,17 @@
 
 <script>
     document.querySelector('button[type="reset"]').addEventListener('click', function(e) {
-    e.preventDefault();
+        e.preventDefault();
 
-    document.getElementById('title').value = '';
-    document.getElementById('content').value = '';
-    document.getElementById('categorySelect').value = '0';
-    document.getElementById('img').value = '';
+        document.getElementById('title').value = '';
+        document.getElementById('content').value = '';
+        document.getElementById('categorySelect').value = '0';
+        document.getElementById('img').value = '';
 
-    const imgPreview = document.querySelector('.img-preview');
-    if (imgPreview) {
-        imgPreview.src = '';
-        imgPreview.style.display = 'none';
-    }
-});
+        const imgPreview = document.querySelector('.img-preview');
+        if (imgPreview) {
+            imgPreview.src = '';
+            imgPreview.style.display = 'none';
+        }
+    });
 </script>

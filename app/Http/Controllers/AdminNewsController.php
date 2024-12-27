@@ -14,11 +14,10 @@ class AdminNewsController extends Controller
 {
     public function index()
     {
-        $data = DB::table('news')
-        ->get();
+        $data = DB::table('news')->get();
         $categories = DB::table('category')->get();
         // return $data;
-        // return $categories;
+        // return $popularPost;
         return view('admin.dashboard', ['data' => $data, 'categories' => $categories]);
     }
 

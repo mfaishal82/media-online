@@ -13,8 +13,8 @@
                 {{-- @foreach ($isPopular as $item)
                 <li><a href="/post/{{ $item->id }}">{{ substr($item->title, 0, 35) }}...</a></li>
             @endforeach --}}
-                @foreach ($data as $item)
-                    <li><a href="/detail/{{ $item->news_id }}">{{ substr($item->title, 0, 35) }}...</a></li>
+                @foreach ($popularPost as $item)
+                    <li><a href="/detail/{{ $item->id}}">{{ substr($item->title, 0, 35) }}...</a></li>
                 @endforeach
                 {{-- <li><a href="/">Make Money Online Creating Websites</a></li>
                 <li><a href="/">Top 100 Internet Marketing Tips</a></li>

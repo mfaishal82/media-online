@@ -86,7 +86,7 @@
     </style>
 
     <div class="news-container">
-        <h2 class="news-title">Index Data Table</h2>
+        <h2 class="news-title">Index Data</h2>
         <form class="search" action="/search-index" style="margin-top: 10px; margin-bottom: 20px;">
             <input type="text" name="keywordIndex" id="s" placeholder="Search index here..." />
             <button type="submit" style="cursor: pointer;">Search</button>

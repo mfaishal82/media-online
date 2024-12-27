@@ -16,8 +16,12 @@ class FrontendController extends Controller
         ->orderBy('created_at', 'desc')
         ->get();
 
-        // return $data;
-        return view('frontend.home', ['data' => $data]);
+        $popularPost = DB::table('news')
+        ->where('isPopular', 'true')
+        ->get();
+
+        // return $popularPost;
+        return view('frontend.home', ['data' => $data, 'popularPost' => $popularPost]);
     }
 
     public function aboutUs()
