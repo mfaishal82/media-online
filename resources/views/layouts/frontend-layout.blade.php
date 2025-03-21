@@ -27,7 +27,7 @@
                 <p>Breaking News Portal</p>
             </div>
             <div class="ad468x60"> <a href="/"><img width="300" height="80"
-                        src="https://d2c0db5b8fb27c1c9887-9b32efc83a6b298bb22e7a1df0837426.ssl.cf2.rackcdn.com/17460994-logo-1200x432.jpeg#1200x432"
+                        src="/images/name-logo.jpeg"
                         alt="" /></a> </div>
             <div class="break"></div>
             <ol>

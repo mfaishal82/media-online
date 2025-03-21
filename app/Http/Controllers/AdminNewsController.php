@@ -14,7 +14,9 @@ class AdminNewsController extends Controller
 {
     public function index()
     {
-        $data = DB::table('news')->get();
+        $data  = DB::table('news')
+        ->orderBy('created_at', 'asc')
+        ->get();
         $categories = DB::table('category')->get();
         // return $data;
         // return $popularPost;
